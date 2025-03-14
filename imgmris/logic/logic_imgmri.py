@@ -21,7 +21,7 @@ def cargarPrueba():
     """Crea registros en la BD con URLs de imágenes en GitHub."""
     imagenes=ImgMri.objects.all()
     if len(imagenes)==0:
-        examen = Examen.objects.get_or_create(solicitud=1, paciente="sub-00001", cc=123456, fecha="2021-01-01")
+        examen = Examen.objects.get_or_create(solicitud=1, paciente="sub-00001", cc=123456, fecha="2021-01-01")[0]
 
         for folder in EXAMENES.items():
 
