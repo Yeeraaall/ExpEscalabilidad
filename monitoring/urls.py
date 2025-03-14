@@ -22,4 +22,5 @@ urlpatterns = [
     path('', views.index),
     path('', include('imgmris.urls')),
     path('', include('examenes.urls')),
+    path('health-check/', views.healthCheck)
 ]
