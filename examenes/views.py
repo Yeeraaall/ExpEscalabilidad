@@ -5,7 +5,7 @@ from django.urls import reverse
 from .forms import ExamenForm
 from .logic.examen_logic import get_examenes, create_examen
 
-def variable_list(request):
+def examen_list(request):
     examenes = get_examenes()
     context = {
         'examen_list': examenes
