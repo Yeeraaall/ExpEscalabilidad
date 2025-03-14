@@ -11,11 +11,11 @@ def create_imgmris(form):
     return ()
 
 def cargarPrueba():
-    EXAMENES = {
-    "sub-00001_T1": "T1",
-    "sub-00001_T2": "T2",
-    "sub-00001_T3": "T3"
-    }
+    examenes = [
+    "sub-00001_T1",
+    "sub-00001_T2",
+    "sub-00001_T3"
+    ]
     BASE_GITHUB_URL = "https://raw.githubusercontent.com/sofiaghost/MRI-Archivos/main/examen_1/"
 
     """Crea registros en la BD con URLs de imágenes en GitHub."""
@@ -23,7 +23,7 @@ def cargarPrueba():
     if len(imagenes)==0:
         examen = Examen.objects.get_or_create(solicitud=1, paciente="sub-00001", cc=123456, fecha="2021-01-01")[0]
 
-        for folder in EXAMENES.items():
+        for folder in examenes:
 
             for i in range(100):  # Suponiendo que cada folder tiene 100 imágenes
                 image_url = f"{BASE_GITHUB_URL}{folder}/slice_{i:03d}.png"
