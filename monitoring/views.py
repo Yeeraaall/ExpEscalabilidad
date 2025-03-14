@@ -6,5 +6,5 @@ def index(request):
     cargarPrueba()
     return render(request, 'index.html')
 
-def healtCheck(request):
+def healthCheck(request):
     return HttpResponse('ok')
