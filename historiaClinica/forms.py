@@ -1,17 +1,17 @@
 from django import forms
-from .models import Examen
+from .models import HistoriaClinica
 
-class ExamenForm(forms.ModelForm):
+class HistoriaForm(forms.ModelForm):
     class Meta:
-        model = Examen
+        model = HistoriaClinica
         fields = [
-            'solicitud',
+            'id',
             'paciente',
             'cc',
             #'fecha',
         ]
         labels = {
-            'solicitud' : 'Solicitud',
+            'id' : 'Id',
             'paciente' : 'Paciente',
             'cc' : 'CC',
             #'fecha' : 'Fecha',

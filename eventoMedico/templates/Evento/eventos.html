@@ -4,12 +4,7 @@
 <div class="content">
     <div class="">
         <div class="page-header-title">
-            <h4 class="page-title">Examenes</h4>
-            <div style="text-align:right;">
-                <button type="button" class="btn btn-success waves-effect waves-light"
-                        onClick=" window.location.href='/examencreate' " style="text-align:center;">+
-                </button>
-            </div>
+            <h4 class="page-title">Consultas Médicas</h4> 
         </div>
     </div>
 
@@ -21,24 +16,23 @@
 
             <div class="panel panel-default">
                 <div class="panel-body">
-
                     <table class="table table-hover">
                         <thead>
                         <tr style="color:#0E2EB0">
-                            <th>Examen</th>
-                            <th>Paciente</th>
-                            <th>Identificacion</th>
                             <th>Fecha</th>
+                            <th>Paciente</th>
+                            <th>Especialidad</th>
+                            <th>Comentarios</th>
                         </tr>
                         </thead>
                         <tbody>
 
-                        {% for examen in examen_list %}
+                        {% for evento in evento_list %}
                         <tr>
-                            <td>{{ examen.solicitud }}</td>
-                            <td>{{ examen.paciente }}</td>
-                            <td>{{ examen.cc }}</td>
-                            <td>N/A</td>
+                            <td>{{evento.fecha}}</td>
+                            <td>{{evento.historiaPaciente.paciente}}</td>
+                            <td>{{evento.especialidad}}</td>
+                            <td>{{evento.comentarios}}</td>
                         </tr>
                         {% endfor %}
 
@@ -57,4 +51,5 @@
         </div>
     </div>
 </div>
+
 {% endblock %}

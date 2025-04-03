@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class MeasurementsConfig(AppConfig):
-    name = 'imgmris'
+    name = 'eventos'
