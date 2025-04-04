@@ -2,7 +2,7 @@ from rest_framework import serializers
 from . import models
 
 
-class ImgMriSerializer(serializers.ModelSerializer):
+class EventoSerializer(serializers.ModelSerializer):
 
     class Meta:
         fields = ('id', 'fecha', 'historiaPaciente', 'especialidad', 'comentarios')
