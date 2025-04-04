@@ -1,5 +1,5 @@
 from django.db import models
-from historia.models import Historia
+from historias.models import Historia
 
 
 class Evento(models.Model):

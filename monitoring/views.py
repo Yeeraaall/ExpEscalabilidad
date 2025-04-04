@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from historia.models import Historia
+from historias.models import Historia
 
 def index(request):
     a=Historia.objects.all()
