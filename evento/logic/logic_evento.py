@@ -1,7 +1,7 @@
-from ..models import EventoMedico
+from ..models import Evento
 
 def get_eventos():
-    queryset = EventoMedico.objects.all()
+    queryset = Evento.objects.all()
     return (queryset)
 
 def create_evento(form):

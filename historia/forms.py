@@ -1,9 +1,9 @@
 from django import forms
-from .models import HistoriaClinica
+from .models import Historia
 
 class HistoriaForm(forms.ModelForm):
     class Meta:
-        model = HistoriaClinica
+        model = Historia
         fields = [
             'id',
             'paciente',

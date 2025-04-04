@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class HistoriaClinica(models.Model):
+class Historia(models.Model):
     id = models.IntegerField(primary_key=True)
     paciente = models.CharField(max_length=100)
     cc=models.IntegerField()

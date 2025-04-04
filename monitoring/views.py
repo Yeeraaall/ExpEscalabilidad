@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from ..historiaClinica.models import HistoriaClinica
+from historia.models import Historia
 
 def index(request):
-    a=HistoriaClinica.objects.all()
+    a=Historia.objects.all()
     if len(a) == 0:
-        HistoriaClinica.objects.create(id=1, paciente='Juan', cc=123456)
+        Historia.objects.create(id=1, paciente='Juan', cc=123456)
     return render(request, 'index.html')
 
 def healthCheck(request):

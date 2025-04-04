@@ -1,10 +1,10 @@
 from django.db import models
-from historiaClinica.models import HistoriaClinica
+from historia.models import Historia
 
 
-class EventoMedico(models.Model):
+class Evento(models.Model):
     fecha=models.DateField()
-    historiaPaciente=models.ForeignKey(HistoriaClinica, on_delete=models.CASCADE, default=None)
+    historiaPaciente=models.ForeignKey(Historia, on_delete=models.CASCADE, default=None)
     especialidad=models.CharField(max_length=100, default="Consulta General")
     comentarios=models.TextField(default=None)
     

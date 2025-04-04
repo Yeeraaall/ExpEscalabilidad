@@ -1,7 +1,7 @@
-from ..models import HistoriaClinica
+from ..models import Historia
 
 def get_historias():
-    queryset = HistoriaClinica.objects.all()
+    queryset = Historia.objects.all()
     return (queryset)
 
 def create_historia(form):

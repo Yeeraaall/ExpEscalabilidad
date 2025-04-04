@@ -6,4 +6,4 @@ class ImgMriSerializer(serializers.ModelSerializer):
 
     class Meta:
         fields = ('id', 'fecha', 'historiaPaciente', 'especialidad', 'comentarios')
-        model = models.EventoMedico
+        model = models.Evento

@@ -1,9 +1,9 @@
 from django import forms
-from .models import EventoMedico
+from .models import Evento
 
 class ImgMriForm(forms.ModelForm):
     class Meta:
-        model = EventoMedico
+        model = Evento
         fields = [
             'fecha',
             'historiaPaciente',
